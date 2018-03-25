@@ -1,6 +1,5 @@
 package ie.ul.csis.cs4084_project;
 
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
@@ -19,12 +18,34 @@ public class TiltPuzzle1 extends AppCompatActivity {
 
     public boolean tp1 = false;
 
+    public int getScreenOrientation()
+    {
+        Display screenOrientation = getWindowManager().getDefaultDisplay();
+        int orientation = Configuration.ORIENTATION_UNDEFINED;
+        if(screenOrientation.getWidth()==screenOrientation.getHeight()){
+            orientation = Configuration.ORIENTATION_SQUARE;
+            //Do something
+
+        } else{
+            if(screenOrientation.getWidth() < screenOrientation.getHeight()){
+                orientation = Configuration.ORIENTATION_PORTRAIT;
+                //Do something
+
+            }else {
+                orientation = Configuration.ORIENTATION_LANDSCAPE;
+                //Do something
+
+            }
+        }
+        return orientation;
+    }
+
     @Override
     public void onConfigurationChanged(Configuration newOrientation) {
         super.onConfigurationChanged(newOrientation);
 
-                if(getScreenOrientation() == Configuration.ORIENTATION_LANDSCAPE)
-                    tp1=true;
+        if(getScreenOrientation() == Configuration.ORIENTATION_LANDSCAPE)
+            tp1=true;
 
         if(tp1 == true)
 
@@ -50,23 +71,4 @@ public class TiltPuzzle1 extends AppCompatActivity {
             alertDialog.show();
         }
     }
-
-    public int getScreenOrientation()
-    {
-        Display screenOrientation = getWindowManager().getDefaultDisplay();
-        int orientation = Configuration.ORIENTATION_UNDEFINED;
-
-            if(screenOrientation.getWidth() < screenOrientation.getHeight()){
-                orientation = Configuration.ORIENTATION_PORTRAIT;
-                //Do something
-
-            }else {
-                orientation = Configuration.ORIENTATION_LANDSCAPE;
-                //Do something
-
-            }
-
-        return orientation;
-    }
-
 }
