@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TiltMenuActivity"></activity>
+        <activity android:name=".TiltMenuActivity" />
+        <activity android:name=".TiltPuzzle1"></activity>
     </application>
 
 </manifest>
