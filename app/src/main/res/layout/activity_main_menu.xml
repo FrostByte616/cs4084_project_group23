@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
-    tools:context="ie.ul.csis.cs4084_project.MainMenu">
+    tools:context="ie.ul.csis.cs4084_project.MainMenu"
+    android:screenOrientation="portrait">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="700dp"
-        android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"

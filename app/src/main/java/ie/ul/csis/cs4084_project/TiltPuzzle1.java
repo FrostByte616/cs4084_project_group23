@@ -22,21 +22,13 @@ public class TiltPuzzle1 extends AppCompatActivity {
     {
         Display screenOrientation = getWindowManager().getDefaultDisplay();
         int orientation = Configuration.ORIENTATION_UNDEFINED;
-        if(screenOrientation.getWidth()==screenOrientation.getHeight()){
-            orientation = Configuration.ORIENTATION_SQUARE;
-            //Do something
 
-        } else{
-            if(screenOrientation.getWidth() < screenOrientation.getHeight()){
+            if(screenOrientation.getWidth() < screenOrientation.getHeight())
                 orientation = Configuration.ORIENTATION_PORTRAIT;
                 //Do something
-
-            }else {
+            else
                 orientation = Configuration.ORIENTATION_LANDSCAPE;
                 //Do something
-
-            }
-        }
         return orientation;
     }
 
@@ -60,7 +52,8 @@ public class TiltPuzzle1 extends AppCompatActivity {
             // Setting Icon to Dialog
             alertDialog.setIcon(R.drawable.tick);
             // Setting OK Button
-            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            alertDialog.setButton("OK", new DialogInterface.OnClickListener()
+            {
                 public void onClick(DialogInterface dialog, int which) {
                     // Write your code here to execute after dialog
                     // closed
