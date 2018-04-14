@@ -19,4 +19,11 @@ public class MainMenu extends AppCompatActivity {
 
         startActivity(startNewActivity) ;
     }
+
+    public void toInputMenu(View view)
+    {
+        Intent startNewActivity = new Intent(this, InputMenu.class) ;
+
+        startActivity(startNewActivity) ;
+    }
 }
