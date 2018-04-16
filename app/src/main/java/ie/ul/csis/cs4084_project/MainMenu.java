@@ -26,4 +26,11 @@ public class MainMenu extends AppCompatActivity {
 
         startActivity(startNewActivity) ;
     }
+
+    public void toVolumeMenu(View view)
+    {
+        Intent startNewActivity = new Intent(this, VolumeMenu.class) ;
+
+        startActivity(startNewActivity) ;
+    }
 }

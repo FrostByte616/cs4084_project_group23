@@ -23,25 +23,37 @@
         app:srcCompat="@drawable/background" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
+        android:id="@+id/buttonTilt"
+        android:layout_width="74dp"
+        android:layout_height="43dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
+        android:onClick="toTiltMenu"
         android:text="Tilt"
         android:typeface="sans"
-        android:onClick="toTiltMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
+        android:id="@+id/buttonInp"
+        android:layout_width="75dp"
+        android:layout_height="52dp"
         android:layout_marginStart="244dp"
         android:layout_marginTop="116dp"
         android:onClick="toInputMenu"
         android:text="Input"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVol"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="220dp"
+        android:onClick="toInputMenu"
+        android:text="Volume"
         android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

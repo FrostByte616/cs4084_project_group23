@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:screenOrientation="portrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.ul.csis.cs4084_project.InputPuzzle1">
+    tools:context="ie.ul.csis.cs4084_project.VolumePuzzle1">
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +28,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Check Answer"
-        android:onClick="isHeadphonesPlugged"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

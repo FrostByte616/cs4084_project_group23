@@ -5,6 +5,7 @@ import android.media.AudioDeviceInfo;
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 
 public class InputPuzzle1 extends AppCompatActivity {
@@ -17,22 +18,19 @@ public class InputPuzzle1 extends AppCompatActivity {
 
     public int inputAnswer1 = 0 ;
 
-    public boolean isHeadphonesPlugged() {
-        AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+    private boolean isHeadphonesPlugged(View view){
+        AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
         AudioDeviceInfo[] audioDevices = audioManager.getDevices(AudioManager.GET_DEVICES_ALL);
-        for (AudioDeviceInfo deviceInfo : audioDevices) {
-            if (deviceInfo.getType() == AudioDeviceInfo.TYPE_WIRED_HEADPHONES || deviceInfo.getType() == AudioDeviceInfo.TYPE_WIRED_HEADSET) {
+        for(AudioDeviceInfo deviceInfo : audioDevices){
+            if(deviceInfo.getType()==AudioDeviceInfo.TYPE_WIRED_HEADPHONES
+                    || deviceInfo.getType()==AudioDeviceInfo.TYPE_WIRED_HEADSET){
                 return true;
             }
-                return false;
-
         }
+        return false;
     }
 
-   if(isHeadphonesPlugged() == true)
-    {
-       inputAnswer1 = 1 ;
-    }
+
 
 
 }
