@@ -16,7 +16,7 @@ public class InputPuzzle1 extends AppCompatActivity {
         setContentView(R.layout.activity_input_puzzle1);
     }
 
-    public int inputAnswer1 = 0 ;
+    //public int inputAnswer1 = 0 ;
 
     private boolean isHeadphonesPlugged(View view){
         AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);

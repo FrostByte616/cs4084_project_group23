@@ -33,4 +33,11 @@ public class MainMenu extends AppCompatActivity {
 
         startActivity(startNewActivity) ;
     }
+
+    public void toTimeMenu(View view)
+    {
+        Intent startNewActivity = new Intent(this, TimeMenu.class) ;
+
+        startActivity(startNewActivity) ;
+    }
 }
