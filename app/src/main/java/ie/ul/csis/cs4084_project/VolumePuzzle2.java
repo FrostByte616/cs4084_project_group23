@@ -1,33 +1,31 @@
 package ie.ul.csis.cs4084_project;
 
-import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
+import android.media.AudioManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class TiltPuzzle1 extends AppCompatActivity {
+public class VolumePuzzle2 extends AppCompatActivity {
 
-    private Button tilt1Button;
+    private Button volume2Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tilt_puzzle1);
+        setContentView(R.layout.activity_volume_puzzle2);
 
-        tilt1Button = (Button) findViewById(R.id.Tilt1Button);
+        volume2Button = (Button) findViewById(R.id.Volume2Button);
 
-        tilt1Button.setOnClickListener(new View.OnClickListener() {
+        volume2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(TiltPuzzle1.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(VolumePuzzle2.this);
 
-                if(checkTilt1() == true)
+                if(checkVol2() == true)
                 {
                     builder.setCancelable(true);
                     builder.setTitle("Correct!");
@@ -41,9 +39,9 @@ public class TiltPuzzle1 extends AppCompatActivity {
                 }
 
 
-                //builder.setCancelable(true);
-                //builder.setTitle("Correct!");
-                //builder.setMessage("You've Solved the Puzzle!");
+                /*builder.setCancelable(true);
+                builder.setTitle("Correct!");
+                builder.setMessage("You've Solved the Puzzle!");*/
 
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
@@ -64,17 +62,13 @@ public class TiltPuzzle1 extends AppCompatActivity {
         });
     }
 
-    public boolean checkTilt1()
+    public boolean checkVol2()
     {
-        Display screenOrientation = getWindowManager().getDefaultDisplay();
-        int orientation ;
+        AudioManager audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        int currentVolume = audio.getStreamVolume(AudioManager.STREAM_RING);
+        int maxVolume = audio.getStreamMaxVolume(AudioManager.STREAM_RING);
 
-        if(screenOrientation.getWidth() < screenOrientation.getHeight())
-            orientation = Configuration.ORIENTATION_PORTRAIT;
-        else
-            orientation = Configuration.ORIENTATION_LANDSCAPE;
-
-        if(orientation == 2)
+        if(currentVolume == (maxVolume-maxVolume))
         {
             return true;
         }
@@ -83,5 +77,4 @@ public class TiltPuzzle1 extends AppCompatActivity {
             return false;
         }
     }
-
 }

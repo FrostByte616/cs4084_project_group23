@@ -15,8 +15,8 @@ public class TimeMenu extends AppCompatActivity {
 
     public void toTimePuzzle1(View view)
     {
-        Intent startInputPuzzle1 = new Intent(this, VolumePuzzle1.class) ;
+        Intent startTimePuzzle1 = new Intent(this, TimePuzzle1.class) ;
 
-        startActivity(startInputPuzzle1) ;
+        startActivity(startTimePuzzle1) ;
     }
 }

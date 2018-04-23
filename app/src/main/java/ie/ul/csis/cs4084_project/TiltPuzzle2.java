@@ -1,33 +1,30 @@
 package ie.ul.csis.cs4084_project;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class TiltPuzzle1 extends AppCompatActivity {
+public class TiltPuzzle2 extends AppCompatActivity {
 
-    private Button tilt1Button;
+    private Button tilt2Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tilt_puzzle1);
+        setContentView(R.layout.activity_tilt_puzzle2);
 
-        tilt1Button = (Button) findViewById(R.id.Tilt1Button);
+        tilt2Button = (Button) findViewById(R.id.Tilt2Button);
 
-        tilt1Button.setOnClickListener(new View.OnClickListener() {
+        tilt2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(TiltPuzzle1.this);
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(TiltPuzzle2.this);
 
-                if(checkTilt1() == true)
+                if(checkTilt2() == true)
                 {
                     builder.setCancelable(true);
                     builder.setTitle("Correct!");
@@ -64,7 +61,7 @@ public class TiltPuzzle1 extends AppCompatActivity {
         });
     }
 
-    public boolean checkTilt1()
+    public boolean checkTilt2()
     {
         Display screenOrientation = getWindowManager().getDefaultDisplay();
         int orientation ;
@@ -74,7 +71,7 @@ public class TiltPuzzle1 extends AppCompatActivity {
         else
             orientation = Configuration.ORIENTATION_LANDSCAPE;
 
-        if(orientation == 2)
+        if(orientation == 1)
         {
             return true;
         }
@@ -83,5 +80,4 @@ public class TiltPuzzle1 extends AppCompatActivity {
             return false;
         }
     }
-
 }

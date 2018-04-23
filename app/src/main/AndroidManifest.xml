@@ -20,10 +20,12 @@
         <activity android:name=".TiltPuzzle1" />
         <activity android:name=".InputMenu" />
         <activity android:name=".InputPuzzle1" />
+        <activity android:name=".TimeMenu" />
+        <activity android:name=".TimePuzzle1" />
         <activity android:name=".VolumeMenu" />
         <activity android:name=".VolumePuzzle1" />
-        <activity android:name=".TimeMenu" />
-        <activity android:name=".TimePuzzle1"></activity>
+        <activity android:name=".VolumePuzzle2" />
+        <activity android:name=".TiltPuzzle2"></activity>
     </application>
 
 </manifest>

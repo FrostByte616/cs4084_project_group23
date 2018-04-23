@@ -19,4 +19,11 @@ public class TiltMenuActivity extends AppCompatActivity {
 
         startActivity(startTiltPuzzle1) ;
     }
+
+    public void toTiltPuzzle2(View view)
+    {
+        Intent startTiltPuzzle2 = new Intent(this, TiltPuzzle2.class) ;
+
+        startActivity(startTiltPuzzle2) ;
+    }
 }

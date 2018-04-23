@@ -41,10 +41,11 @@
         android:text="Time"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="?android:attr/colorBackgroundCacheHint"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="sans"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
